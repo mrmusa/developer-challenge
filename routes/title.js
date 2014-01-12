@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(app) {
   // Module dependencies.
   var mongoose = require('mongoose'),
