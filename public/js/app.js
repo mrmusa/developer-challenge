@@ -31,7 +31,7 @@ angular.module('dc', ['ngRoute', 'ngAnimate', 'ngCookies', 'dc.services', 'dc.co
 })
 
 .constant('DCAPI', {
-  baseUrl: 'http://localhost:3000',
+  baseUrl: '',
   titles: '/api/titles',
   details: '/api/title/',
 });
