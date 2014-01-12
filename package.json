@@ -1,0 +1,23 @@
+{
+  "name": "developer-challenge",
+  "description": "developer-challenge app description here",
+  "version": "0.0.1",
+  "private": true,
+	"dependencies": {
+		"ejs": "latest",
+		"express": "latest",
+		"mongoose": "latest"
+	},
+	"devDependencies": {
+    "grunt": "latest",
+    "grunt-mocha-test": "latest",
+    "bower": "latest",    
+    "supertest": "latest",
+    "mocha": "latest"
+	},
+  "scripts": {
+    "postinstall": "grunt test",
+    "test" : "grunt test",
+    "start": "app.js"
+  }	
+}

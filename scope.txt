@@ -1,0 +1,27 @@
+responsive angular/angular-ui bootstrap page
+restify api using mongo/mongoose - https://blog.apigee.com/detail/restful_api_design_tips_for_search
+typeahead search
+infinite scroll / load more / for results page
+page defaults to no results but loads results as typeahead work
+
+
+components:
+home page:
+  search box
+  results list -- top 10
+  load more 
+details page:
+  navigation bar
+  detail "cards" with - more - expand link
+    poster - http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=nj5zaqjan5r4e3j7va6mraqm&q=cavalcade&page_limit=5&page=1 where (ExternalSources.Name === 'IMDB' && ExternalSources.Key === 'tt' + movies[i].alternate_ids.imdb
+    links to other databases such as IMDB, AFI, and RottenTomatoes
+    title info
+    plot 
+    cast and crew
+    awards
+
+
+
+
+EXCLUSIONS:
+integrate an html5 offline mode for title search but not details

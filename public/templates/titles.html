@@ -1,0 +1,13 @@
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h1>Search for a title by name</h1>
+  </div>
+  <input type="text" ng-model="asyncSelected" placeholder="Search for title name" typeahead-wait-ms="100" typeahead="title.titleName for title in search($viewValue) | filter:$viewValue" typeahead-loading="titlesLoading" class="form-control" typeahead-on-select="onSelect($item, $model, $label, booster)">
+  <i ng-show="titlesLoading" class="glyphicon glyphicon-refresh"></i>
+  
+  <div ng-if="titleSelected">
+    <h1>{{ title.TitleName }} ({{ title.ReleaseYear }})</h1>
+    <p class="lead">{{ title.Storylines[0].Description }}</p>
+  </div>
+</div>
