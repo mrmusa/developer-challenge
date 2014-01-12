@@ -2,6 +2,7 @@ angular.module('dc.controllers', ['ui.bootstrap'])
 
 .controller('TitleCtrl', function($scope, $routeParams, $window, Titles) {
   'use strict';
+
   function reload() {
     $scope.titles = [];
     Titles.all().then(function(titles) {
@@ -12,7 +13,7 @@ angular.module('dc.controllers', ['ui.bootstrap'])
     });
   }
   $scope.search = Titles.search;
-  $scope.onSelect = function ($item, $model, $label) {
+  $scope.onSelect = function($item, $model, $label) {
     console.debug($item, $model, $label);
     Titles.get($item.id).then(function(title) {
       $scope.title = title;

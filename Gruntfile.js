@@ -1,14 +1,16 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    // Configure a mochaTest task
-    mochaTest: {
-      test: {
-        options: {
-          reporter: 'spec'
-        },
-        src: ['test/**/*.js']
-      }
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: [
+        'config/**.js',
+        'models/**.js',
+        'public/js/*.js',
+        'routes/**.js'
+      ]
     },
     watch: {
       js: {
@@ -18,11 +20,11 @@ module.exports = function(grunt) {
         files: '**/*.js',
         tasks: ['check']
       }
-    }    
+    }
   });
 
   grunt.loadNpmTasks('grunt-mocha-test');
 
-  grunt.registerTask('test', 'mochaTest');
+  grunt.registerTask('test', 'mochaTest', 'jshint');
 
 };

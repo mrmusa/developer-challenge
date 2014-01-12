@@ -13,6 +13,7 @@
     "grunt-mocha-test": "latest",
     "bower": "latest",    
     "supertest": "latest",
+    "grunt-contrib-jshint": "~0.7.2",
     "mocha": "latest"
 	},
   "scripts": {

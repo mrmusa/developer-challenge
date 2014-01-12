@@ -5,7 +5,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('dc', ['ngRoute', 'ngAnimate', 'ngCookies', 'dc.services', 'dc.controllers'])
 
-.config(function ($compileProvider){
+.config(function($compileProvider) {
   'use strict';
   // Needed for routing to work
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
@@ -13,17 +13,17 @@ angular.module('dc', ['ngRoute', 'ngAnimate', 'ngCookies', 'dc.services', 'dc.co
 
 .config(function($routeProvider) {
   'use strict';
-  
+
   $routeProvider.when('/titles', {
     templateUrl: 'templates/titles.html',
     controller: 'TitleCtrl'
   });
-  
+
   $routeProvider.when('/titles/:titleId', {
     templateUrl: 'templates/details.html',
     controller: 'DetailsCtrl'
   });
-  
+
   $routeProvider.otherwise({
     redirectTo: '/titles'
   });
@@ -35,4 +35,3 @@ angular.module('dc', ['ngRoute', 'ngAnimate', 'ngCookies', 'dc.services', 'dc.co
   titles: '/api/titles',
   details: '/api/title/',
 });
-
